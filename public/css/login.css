@@ -9,7 +9,7 @@
     grid-template-columns: repeat(2,1fr);
 }
 .grid-container .redes {
-    background-color: rgb(255, 166, 0);
+    background: #9F6666;
 }
 
 .grid-container .login{
@@ -22,6 +22,7 @@ img{
 .imagen-logo{
     display:block;
     margin:auto;
+    margin-top: 20px;
     width: 40%;
 }
 
@@ -78,4 +79,3 @@ a{
     align-items: center;
     flex-direction: column;
 }
-
