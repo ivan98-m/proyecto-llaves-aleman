@@ -14701,28 +14701,33 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   opacity: 1;
   position: absolute;
   visibility: visible;
+  
 }
 
 .logo-xs.brand-image-xs,
 .logo-xl.brand-image-xs {
   left: 18px;
   top: 12px;
+  
 }
 
 .logo-xs.brand-image-xl,
 .logo-xl.brand-image-xl {
   left: 12px;
   top: 6px;
+  
 }
 
 .logo-xs {
   opacity: 0;
   visibility: hidden;
+  
 }
 
 .logo-xs.brand-image-xl {
   left: 16px;
   top: 8px;
+  
 }
 
 .brand-link.logo-switch::before {
