@@ -250,6 +250,7 @@ return [
             'text'        => 'Inventario',
             'url' => 'inventario',
             'icon'        => 'fas fa-book',
+            'icon_color' => 'yellow'
             //'label'       => 4,
             //'label_color' => 'success',
         ],
@@ -259,36 +260,43 @@ return [
             'text' => 'Ventas',
             'url'  => 'ventas',
             'icon' => 'fas fa-money-check-alt',
+            'icon_color' => 'yellow'
         ],
         [
             'text'        => 'Clientes',
             'url'         => 'cliente',
             'icon'        => 'fas fa-user-alt',
+            'icon_color' => 'yellow'
         ],
         [
             'text' => 'Trabajadores',
             'url'  => 'trabajadores',
             'icon' => 'fas fa-user-cog',
+            'icon_color' => 'yellow'
         ],
         [
             'text' => 'Facturacion',
             'url'  => 'facturacion',
             'icon' => 'fas fa-calculator',
+            'icon_color' => 'yellow'
         ],
         [
             'text' => 'Domicilios',
             'url'  => 'domicilios',
             'icon' => 'fas fa-motorcycle',
+            'icon_color' => 'yellow'
         ],
         [
             'text' => 'Trabajos',
             'url'  => 'trabajos',
             'icon' => 'fas fa-fw fa-lock',
+            'icon_color' => 'yellow'
         ],
         [
             'text' => 'Proveedores',
             'url'  => 'proveedores',
             'icon' => 'fas fa-key',
+            'icon_color' => 'yellow'
         ],
        /* [
             'text'    => 'multilevel',
