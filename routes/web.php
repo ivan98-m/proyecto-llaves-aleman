@@ -25,10 +25,13 @@ Route::get('dash', function () {
     return view('dash.index');
 });
 Route::get('cliente', function () {
-    return view('cliente');
+    return view('clientes.cliente');
 });
 Route::get('inventario', function () {
-    return view('inventario');
+    return view('inventarios.inventario');
+});
+Route::get('inventario/editar', function () {
+    return view('inventarios.edit_inventario');
 });
 Route::get('ventas', function () {
     return view('ventas');
