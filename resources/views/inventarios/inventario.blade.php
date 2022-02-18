@@ -37,10 +37,7 @@
                 <td>calle falsa 123</td>
                 <td>325225225</td>
                 <td>sony@gmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-				
-                
-               
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>   
             </tr>
             <tr>
                 <td>Jena </td>
@@ -50,9 +47,96 @@
                 <td>318525455</td>
                 <td>jena@hotmail.com</td>
                 <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-				
-                
-              
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
+            </tr>
+            <tr>
+                <td>Jena </td>
+                <td>Gaines</td>
+                <td>105855489</td>
+                <td>cll 25 cr 45-6</td>
+                <td>318525455</td>
+                <td>jena@hotmail.com</td>
+                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
             </tr>
             
         </tbody>

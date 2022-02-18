@@ -40,8 +40,8 @@
     </div>    
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Aceptar</button>
-            <a href= "{{ url()->previous() }}"  class="btn btn-primary">Regresar</a>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i>Aceptar</button>
+            <a href= "{{ url()->previous() }}"  class="btn btn-info"><i class="fa fa-arrow-left"></i>Regresar</a>
         </div>
     </div>
 </form>
