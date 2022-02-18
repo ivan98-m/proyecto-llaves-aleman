@@ -13,7 +13,7 @@
 
 @section('content')
 <div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
-    <a class="btn btn-success" href= inventario/editar  ><i class="fa fa-plus-circle"style="font-size:20px;" ></i>Agregar</a>
+    <a class="btn btn-success" href= inventario/agregar  ><i class="fa fa-plus-circle"style="font-size:20px;" ></i>Agregar</a>
 </div>
 <div class="border border-dark p-2 m-1 rounded">
 <table id="inventario" class="table table-striped table-bordered " style="width:100%">
