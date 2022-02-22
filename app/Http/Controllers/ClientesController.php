@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Cliente;
 
 use Illuminate\Http\Request;
 
@@ -8,12 +9,14 @@ class ClientesController extends Controller
 {
     public function getIndex()
     {
-        return(view('clientes.cliente'));
+        $clientes = Cliente::all();
+        return view('clientes.cliente',['clientes' => $clientes]);
     }
 
-    public function getEdit()
+    public function getEdit($id)
     {
-
+        $cliente = Cliente::findOrfail($id);
+        return view('clientes.edit_cliente', ['id'=>$id, 'cliente' => $cliente]);
     }
 
     public function getAdd()

@@ -56,6 +56,7 @@ Route::get('domicilios', function () {
 Route::get('dash', '\App\Http\Controllers\DashController@getIndex');
 
 Route::get('cliente', '\App\Http\Controllers\ClientesController@getIndex');
+Route::get('cliente/editar/{id}', '\App\Http\Controllers\ClientesController@getEdit');
 
 Route::get('inventario', '\App\Http\Controllers\InventarioController@getIndex');
 Route::get('inventario/editar', '\App\Http\Controllers\InventarioController@getEdit');

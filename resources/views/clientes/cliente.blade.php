@@ -3,7 +3,7 @@
 
 @section('title', 'CLIENTES')
 
-@section('plugins.Datatables' , true)
+@section('plugins.Datatables', true)
 
 @section('content_header')
     <h1>CLIENTES</h1>
@@ -11,52 +11,52 @@
 
 @section('content')
 
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>IDENTIFICACIÓN</th>
-                <th>DIRECCIÓN</th>
-                <th>CELULAR</th>
-                <th>CORREO</th>
-                
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sonya </td>
-                <td>Frost</td>
-                <td>108557455</td>
-                <td>calle falsa 123</td>
-                <td>325225225</td>
-                <td>sony@gmail.com</td>
-                
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                
-            </tr>
-            
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>IDENTIFICACIÓN</th>
-                <th>DIRECCIÓN</th>
-                <th>CELULAR</th>
-                <th>CORREO</th>
-                
-            </tr>
-        </tfoot>
-    </table>
+    <div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
+        <a class="btn btn-success" href=inventario/agregar><i class="fa fa-plus-circle"
+                style="font-size:20px;"></i>Agregar</a>
+    </div>
+    <div class="border border-dark p-2 m-1 rounded">
+        <table id="clientes" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>IDENTIFICACIÓN</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>DIRECCIÓN</th>
+                    <th>CELULAR</th>
+                    <th>CORREO</th>
+                    <th>ACCION</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($clientes as $cliente)
+                    <tr>
+                        <td>{{ $cliente->indentificacion }}</td>
+                        <td>{{ $cliente->nombre }}</td>
+                        <td>{{ $cliente->apellidos }}</td>
+                        <td>{{ $cliente->direccion }}</td>
+                        <td>{{ $cliente->celular }}</td>
+                        <td>{{ $cliente->correo }}</td>
+                        <td>
+                            <a class="btn btn-warning mx-2" href="{{ url('/cliente/editar/'. $cliente->id) }}" ><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-danger" href=""><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>IDENTIFICACIÓN</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>DIRECCIÓN</th>
+                    <th>CELULAR</th>
+                    <th>CORREO</th>
+                    <th>ACCION</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 @stop
 
 @section('css')
@@ -64,9 +64,9 @@
 @stop
 
 @section('js')
-    <script> 
-    $(document).ready(function() {
-        $('#cliente').DataTable();
-    } );
+    <script>
+        $(document).ready(function() {
+            $('#clientes').DataTable();
+        });
     </script>
 @stop
