@@ -6,13 +6,14 @@ use Illuminate\Database\Seeder;
 use App\Models\Cliente;
 use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class ClientesTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
+
     private $arrayClientes = array(
         array(
             'identificacion' =>'CC 108557455',
@@ -105,7 +106,8 @@ class DatabaseSeeder extends Seeder
 			'direcion' => 'cll 25 cr 45-6', 
 			'celular' => '318525455',
 			'correo' => 'jena@hotmail.com', 
-		) 
+		),
+        
     );
 
     public function run()
@@ -119,10 +121,10 @@ class DatabaseSeeder extends Seeder
 
         foreach( $this->arrayClientes as $cliente) {
             $p = new Cliente();
-            $p->indentificacion = $cliente['identificacion'];
+            $p->identificacion = $cliente['identificacion'];
             $p->nombre = $cliente['nombre'];
             $p->apellidos = $cliente['apellidos'];
-            $p->direccion = $cliente['direcion'];
+            $p->direccion = $cliente['direccion'];
             $p->celular = $cliente['celular'];
             $p->correo = $cliente['correo']; 
             $p->save();
