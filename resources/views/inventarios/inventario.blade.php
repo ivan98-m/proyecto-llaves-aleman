@@ -1,4 +1,5 @@
 {{-- vista dashborad --}}
+
 @extends('adminlte::page')
 
 @section('title', 'INVENTARIO')
@@ -31,14 +32,11 @@
         </thead>
         <tbody>
             <tr>
-                <td>Sonya </td>
-                <td>Frost</td>
-                <td>108557455</td>
-                <td>calle falsa 123</td>
-                <td>325225225</td>
-                <td>sony@gmail.com</td>
+  
+              
                 <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>   
-            </tr>
+
+                </tr>
             <tr>
                 <td>Jena </td>
                 <td>Gaines</td>

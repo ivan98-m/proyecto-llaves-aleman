@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-<table id="example" class="table table-striped table-bordered" style="width:100%">
+<table id="trabajadores" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>NOMBRE</th>
@@ -59,7 +59,7 @@
 @section('js')
     <script> 
     $(document).ready(function() {
-        $('#example').DataTable();
+        $('#trabajadores').DataTable();
     } );
  </script>
 @stop

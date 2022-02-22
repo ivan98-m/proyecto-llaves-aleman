@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('login', function () {
@@ -68,3 +68,7 @@ Route::get('trabajadores', '\App\Http\Controllers\TrabajadoresController@getInde
 Route::get('trabajos', '\App\Http\Controllers\TrabajosController@getIndex');
 
 Route::get('proveedores', '\App\Http\Controllers\ProveedoresController@getIndex');
+
+Auth::routes();
+
+
