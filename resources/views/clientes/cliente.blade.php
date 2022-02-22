@@ -38,10 +38,15 @@
                         <td>{{ $cliente->celular }}</td>
                         <td>{{ $cliente->correo }}</td>
                         <td>
-                            <a class="btn btn-warning mx-2" href="{{ url('/cliente/editar/'. $cliente->id) }}" ><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-danger" href=""><i class="fa fa-trash"></i></a>
+                            {{-- <a class="btn btn-warning p-1" href="{{ url('/cliente/editar/'. $cliente->id) }}" ><i class="fa fa-edit"></i></a> --}}
+                            <a class="btn btn-warning p-1" href="#" data-toggle="modal" data-target="#modal_edit{{$cliente->id}}">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <a class="btn btn-danger p-1" href=""><i class="fa fa-trash"></i></a>
                         </td>
+                        {{-- @include('clientes.modal_edit') --}}
                     </tr>
+                    @include('clientes.modal_edit')
                 @endforeach
             </tbody>
             <tfoot>
