@@ -1,14 +1,14 @@
 {{-- vista dashborad --}}
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Aleman')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+   <div align="center"> <img src="/img/logo.png" width= "320" height="170"> </div>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p></p>
 @stop
 
 @section('css')

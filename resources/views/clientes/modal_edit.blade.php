@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="form-group m-0">
                         <label for="recipient-name" class="col-form-label">Identificacíon:</label>
-                        <input type="text" value="{{$cliente->indentificacion}}" class="form-control" id="identificacion">
+                        <input type="text" value="{{$cliente->identificacion}}" class="form-control" id="identificacion">
                     </div>
                     <div class="row g-2 m-0">
                         <div class="col-md">
