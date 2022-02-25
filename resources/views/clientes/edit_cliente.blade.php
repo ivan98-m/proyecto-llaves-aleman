@@ -9,9 +9,9 @@
 @section('content')
 <form>
     <div class="form-group row">
-        <label for="labelcod" class="col-form-label"> Indentificacion </label>
+        <label for="labelcod" class="col-form-label"> Identificacion </label>
         <div class="col-sm">
-             <input type="text" value="{{$cliente->indentificacion}}" class="col-sm-8 form-control" id="Indentificacion" name="Indentificacion" placeholder="Indentificacion">
+             <input type="text" value="{{$cliente->identificacion }}" class="col-sm-8 form-control" id="Identificacion" name="Identificacion" placeholder="Identificacion">
         </div>
         <label for="labelproveedor" class="col-form-label">  Nombre  </label>
         <div class="col-sm">

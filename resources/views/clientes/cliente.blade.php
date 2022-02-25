@@ -12,8 +12,12 @@
 @section('content')
 
     <div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
-        <a class="btn btn-success" href=inventario/agregar><i class="fa fa-plus-circle"
-                style="font-size:20px;"></i>Agregar</a>
+        {{-- <a class="btn btn-success" href=inventario/agregar><i class="fa fa-plus-circle"
+                style="font-size:20px;"></i>Agregar</a> --}}
+        <a class="btn btn-success" href="#" data-toggle="modal" data-target="#modal_create_clientes">
+                <i class="fa fa-plus-circle"style="font-size:20px;"></i>Agregar
+        </a>
+        @include('clientes.modal_create_clientes')
     </div>
     <div class="border border-dark p-2 m-1 rounded">
         <table id="clientes" class="table table-striped table-bordered" style="width:100%">
@@ -31,7 +35,7 @@
             <tbody>
                 @foreach ($clientes as $cliente)
                     <tr>
-                        <td>{{ $cliente->indentificacion }}</td>
+                        <td>{{ $cliente->identificacion }}</td>
                         <td>{{ $cliente->nombre }}</td>
                         <td>{{ $cliente->apellidos }}</td>
                         <td>{{ $cliente->direccion }}</td>
