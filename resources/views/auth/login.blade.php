@@ -12,10 +12,10 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Usuario') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end "><h3>{{ __('Usuario') }}</h3></label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control  @error('email') is-invalid @enderror " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password"  class="col-md-4 col-form-label text-md-end">{{ __('Contraseña') }} </label>
+                            <label for="password"  class="col-md-4 col-form-label text-md-end"><h3>{{ __('Contraseña') }}</h3> </label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Min 8 caracteres">

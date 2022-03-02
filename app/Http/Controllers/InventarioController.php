@@ -8,6 +8,11 @@ use App\Models\Inventario;
 
 class InventarioController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function getIndex()
     {
         $inventario = Inventario::all();

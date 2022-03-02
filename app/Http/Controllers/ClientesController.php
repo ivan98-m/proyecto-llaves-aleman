@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ClientesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function getIndex()
     {
         $clientes = Cliente::all();
