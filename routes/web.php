@@ -1,6 +1,9 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//      return view('welcome');
+// });
 
-Route::get('login', function () {
-    return view('login');
-});
+// Route::get('/', function () {
+//     return view('layouts.login');
+// });
 
 // Route::get('dash', function () {
 //     return view('dash.index');
@@ -53,6 +56,9 @@ Route::get('domicilios', function () {
 // });
 
 //uso de controladores 
+
+Route::get('/', [App\Http\Controllers\DashController::class, 'getIndex'])->name('login');
+
 Route::get('dash', '\App\Http\Controllers\DashController@getIndex');
 
 Route::get('cliente', '\App\Http\Controllers\ClientesController@getIndex');
@@ -69,3 +75,6 @@ Route::get('trabajadores', '\App\Http\Controllers\TrabajadoresController@getInde
 Route::get('trabajos', '\App\Http\Controllers\TrabajosController@getIndex');
 
 Route::get('proveedores', '\App\Http\Controllers\ProveedoresController@getIndex');
+
+Auth::routes();
+
