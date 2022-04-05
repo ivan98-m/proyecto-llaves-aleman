@@ -1,5 +1,6 @@
 {{-- vista dashborad --}}
-@extends('adminlte::page')
+{{-- @extends('adminlte::page') --}}
+@extends('master')
 
 @section('title', 'CLIENTES')
 
@@ -12,8 +13,12 @@
 @section('content')
 
     <div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
-        <a class="btn btn-success" href=inventario/agregar><i class="fa fa-plus-circle"
-                style="font-size:20px;"></i>Agregar</a>
+        {{-- <a class="btn btn-success" href=inventario/agregar><i class="fa fa-plus-circle"
+                style="font-size:20px;"></i>Agregar</a> --}}
+        <a class="btn btn-success" href="#" data-toggle="modal" data-target="#modal_create_clientes">
+                <i class="fa fa-plus-circle"style="font-size:20px;"></i>Agregar
+        </a>
+        @include('clientes.modal_create_clientes')
     </div>
     <div class="border border-dark p-2 m-1 rounded">
         <table id="clientes" class="table table-striped table-bordered" style="width:100%">
@@ -38,13 +43,21 @@
                         <td>{{ $cliente->celular }}</td>
                         <td>{{ $cliente->correo }}</td>
                         <td>
-                            {{-- <a class="btn btn-warning p-1" href="{{ url('/cliente/editar/'. $cliente->id) }}" ><i class="fa fa-edit"></i></a> --}}
-                            <a class="btn btn-warning p-1" href="#" data-toggle="modal" data-target="#modal_edit{{$cliente->id}}">
+                            {{-- <a class="btn btn-warning p-1" href="{{ url('/dashboard/clientes/editar/'. $cliente->id) }}" ><i class="fa fa-edit"></i></a> --}}
+                            {{-- <a class="btn btn-warning p-1" href="#" data-toggle="modal" data-target="#modal_edit{{$cliente->id}}">
                                 <i class="fa fa-edit"></i>
-                            </a>
-                            <a class="btn btn-danger p-1" href=""><i class="fa fa-trash"></i></a>
+                            </a> --}}
+                            <button class="btn btn-warning p-1" data-toggle="modal" data-target="#modal_edit{{$cliente->id}}">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            {{-- <button type="submit" onclick="confirmDelete()" class="btn btn-danger mt-2"><i class="fa fa-trash"></i></button> --}}
+                            <form method="POST" action="{{ route('cliente.delete', $cliente->id) }}" style="display:inline">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit"  class="btn btn-danger show_confirm p-1"><i class="fa fa-trash"></i></button>
+                                {{-- <a  type="submit" class="btn btn-danger p-1" href=""><i class="fa fa-trash"></i></a> --}}
+                            </form>
                         </td>
-                        {{-- @include('clientes.modal_edit') --}}
                     </tr>
                     @include('clientes.modal_edit')
                 @endforeach
@@ -62,11 +75,11 @@
             </tfoot>
         </table>
     </div>
+
+    @include('notificaciones')
+
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
 @section('js')
     <script>
@@ -75,3 +88,6 @@
         });
     </script>
 @stop
+
+
+

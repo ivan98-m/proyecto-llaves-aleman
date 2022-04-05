@@ -1,5 +1,6 @@
 {{-- vista dashborad --}}
-@extends('adminlte::page')
+{{-- @extends('adminlte::page') --}}
+@extends('master')
 
 @section('title', 'Aleman')
 
@@ -34,9 +35,6 @@
         </font>
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
 @section('js')
     <script> console.log('Hi!'); </script>
