@@ -24,5 +24,6 @@ class DashController extends Controller
     public function getIndex()
     {
         return(view('dash.index'));
+        
     }
 }

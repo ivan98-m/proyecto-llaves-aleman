@@ -1,5 +1,6 @@
 {{-- vista dashborad --}}
-@extends('adminlte::page')
+{{-- @extends('adminlte::page') --}}
+@extends('master')
 
 @section('title', 'INVENTARIO')
 
@@ -155,9 +156,9 @@
 </div>
 @stop
 
-@section('css')
+{{-- @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+@stop --}}
 
 @section('js')
     <script> 
