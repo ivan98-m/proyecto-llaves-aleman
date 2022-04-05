@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
-<form>
+<form method="POST" action="{{route ('inventario/agregar')}}">
+    @csrf
+    @method('POST')
     <div class="form-group row">
         <label for="labelcod" class="col-sm-1 col-form-label"> COD </label>
         <div class="col-sm-1">

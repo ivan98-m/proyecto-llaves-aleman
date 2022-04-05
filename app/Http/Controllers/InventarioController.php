@@ -24,16 +24,9 @@ class InventarioController extends Controller
         return view('inventarios.edit_inventario');
     }
 
-    public function getAdd()
+    public function getAdd(Request $request)
     {
-        $inventario = new Inventario;
-        $inventario -> codigo = '';
-        $inventario -> proveedor = '';
-        $inventario -> cantidad = '';
-        $inventario -> detalle = '';
-        $inventario -> precioVenta = '';
-        $inventario -> precioProveedor = '';
-        $inventario -> save();
+        
         return view('inventarios.create_inventario');
     }
 

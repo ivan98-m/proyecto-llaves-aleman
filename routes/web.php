@@ -60,7 +60,7 @@ Route::get('cliente/editar/{id}', '\App\Http\Controllers\ClientesController@getE
 
 Route::get('inventario', '\App\Http\Controllers\InventarioController@getIndex');
 Route::get('inventario/editar', '\App\Http\Controllers\InventarioController@getEdit');
-Route::get('inventario/agregar', '\App\Http\Controllers\InventarioController@getAdd');
+Route::post('inventario/agregar', '\App\Http\Controllers\InventarioController@getAdd');
 
 Route::get('ventas', '\App\Http\Controllers\VentasController@getIndex');
 
