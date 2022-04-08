@@ -18,11 +18,7 @@
                         @csrf
 
                         <div class="row mb-3">
-<<<<<<< HEAD
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Correo electronico') }}</label>
-=======
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
->>>>>>> prueba
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -37,13 +33,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-<<<<<<< HEAD
                                 <button type="submit" class="login-button">
                                     {{ __('Enviar contraseña') }}
-=======
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
->>>>>>> prueba
                                 </button>
                             </div>
                         </div>
