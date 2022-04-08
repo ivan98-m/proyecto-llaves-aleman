@@ -7,158 +7,83 @@
 @section('plugins.Datatables' , true)
 
 @section('content_header')
-    <h1>INVENTARIO</h1>
-    
-    
+    <h1>INVENTARIO</h1> 
 @stop
 
 @section('content')
 <div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
-    <a class="btn btn-success" href= inventario/agregar  ><i class="fa fa-plus-circle"style="font-size:20px;" ></i>Agregar</a>
+    <button class="btn btn btn-success" data-toggle="modal" data-target="#inventario_create">
+        <i class="fa fa-plus-circle"></i>Agregar
+    </button>
+    {{-- <a class="btn btn-success" href="#" data-toggle="modal" data-target="#inventario_create">
+            <i class="fa fa-plus-circle"style="font-size:20px;"></i>Agregar
+    </a> --}}
+    @include('inventarios.inventario_create')
 </div>
+{{-- @foreach($proveedores as $proveedor)
+
+{{ $proveedor='holaaa'}}
+@endforeach --}}
 <div class="border border-dark p-2 m-1 rounded">
 <table id="inventario" class="table table-striped table-bordered " style="width:100%">
         <thead>
             <tr>
                 <th>CODIGO</th>
-                <th>PROVEEDOR</th>
+                <th>NOMBRE PRODUCTO</th>
+                <th>DESCRIPCION</th>
+                <th>PRECIO</th>
                 <th>CANTIDAD</th>
-                <th>DETALLE</th>
-                <th>PRECIO_VENTA</th>
-                <th>PRECIO_PROVEEDOR</th>
-                <th>ACCIÓN</th>
-                
+                <th>ACCION</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Sonya </td>
-                <td>Frost</td>
-                <td>108557455</td>
-                <td>calle falsa 123</td>
-                <td>325225225</td>
-                <td>sony@gmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>   
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-                <td><a class="btn btn-warning mx-2" href= inventario/editar  ><i class="fa fa-edit"></i></a><a class="btn btn-danger" href=""><i class="fa fa-trash"></i></td>
-            </tr>
-            
+            @foreach ($articulos as $articulo)
+                    <tr>
+                        @foreach ($proveedores as $proveedor)
+                            @if ($proveedor->id_proveedor == $articulo->id_proveedor)
+                                @php
+                                    $nom_proveedor = $proveedor->nom_proveedor
+                                @endphp
+                                @break
+                            @endif   
+                        @endforeach
+                        <td>{{ $articulo->cod_articulo}}</td>
+                        <td>{{ $articulo->art_nombre}}</td>
+                        <td>{{ $articulo->art_descripcion}}</td>
+                        <td>{{ $articulo->p_venta}}</td>
+                        <td>{{ $articulo->stock}}</td>
+                        <td>
+                            <button class="btn btn-primary p-1" data-toggle="modal" data-target="#inventario_show{{ $articulo->cod_articulo, $nom_proveedor}}">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <button class="btn btn-warning p-1" data-toggle="modal" data-target="#inventario_edit{{ $articulo->cod_articulo }}">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <form method="POST" action="{{ route('product.delete', $articulo->cod_articulo) }}" style="display:inline">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit"  class="btn btn-danger show_confirm p-1"><i class="fa fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    @include('inventarios.inventario_show')
+                    @include('inventarios.inventario_edit')
+                @endforeach
         </tbody>
         <tfoot>
             <tr>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>IDENTIFICACIÓN</th>
-                <th>DIRECCIÓN</th>
-                <th>CELULAR</th>
-                <th>CORREO</th>
-                <th>ACCIÓN</th>
+                <th>CODIGO</th>
+                <th>NOMBRE PRODUCTO</th>
+                <th>DESCRIPCION</th>
+                <th>PRECIO</th>
+                <th>CANTIDAD</th>
+                <th>ACCION</th>
             </tr>
         </tfoot>
     </table>
 </div>
+@include('notificaciones')
 @stop
-
-{{-- @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop --}}
 
 @section('js')
     <script> 

@@ -1,5 +1,4 @@
 <div class="modal fade text-left" id="modal_edit{{ $cliente->id }}" tabindex="-1" role="dialog" aria-hidden="true">
-
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -43,7 +42,6 @@
                         <input type="text" value="{{ $cliente->correo }}" class="form-control" id="correo" name="correo">
                     </div>
                     <div class="modal-footer">
-                        {{-- <input type="submit" class="btn btn-primary"> --}}
                         <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i>Actualizar</button>
                         <button class="btn btn-danger" data-dismiss="modal">Close</button>
                         {{-- <a href= "{{ url()->previous() }}"  class="btn btn-info"><i class="fa fa-arrow-left"></i>Regresar</a> --}}

@@ -256,17 +256,17 @@ return [
         ],
         
         //['header' => 'account_settings'],
-        [
+        /*[
             'text' => 'Ventas',
             'url'  => 'dashboard/ventas',
             'icon' => 'fas fa-money-check-alt',
             'icon_color' => 'yellow'
-        ],
+        ],*/
         [
             'text'        => 'Clientes',
             'url'         => 'dashboard/clientes',
             'icon'        => 'fas fa-user-alt',
-            'icon_color' => 'yellow'
+            'icon_color'  => 'yellow'
         ],
         [
             'text' => 'Trabajadores',
@@ -278,7 +278,21 @@ return [
             'text' => 'Facturacion',
             'url'  => 'dashboard/facturacion',
             'icon' => 'fas fa-calculator',
-            'icon_color' => 'yellow'
+            'icon_color' => 'yellow',
+            'submenu' => [
+                [
+                    'text' => 'Ventas',
+                    'url'  => '#',
+                    'icon' => 'fas fa-donate',
+                    'icon_color' => 'green'
+                ],
+                [
+                    'text' => 'Compras',
+                    'url'  => 'dashboard/facturacion/compras',
+                    'icon' => 'far fa-credit-card',
+                    'icon_color' => 'green'
+                ],
+            ]
         ],
         [
             'text' => 'Domicilios',
