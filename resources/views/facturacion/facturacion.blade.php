@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('master')
 
 @section('title', 'FACTURACION')
 
@@ -94,10 +94,13 @@
     </section>
 @stop
 
+<<<<<<< HEAD:resources/views/facturacion.blade.php
 @section('css')
     
 @stop
 
+=======
+>>>>>>> prueba:resources/views/facturacion/facturacion.blade.php
 @section('js')
 
     <script src = "/js/facturacion.js"></script>

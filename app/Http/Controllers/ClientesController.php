@@ -60,7 +60,6 @@ class ClientesController extends Controller
         $cliente->correo = $request->correo;
         $cliente->save();
         toast('Cliente actualizado con exito','success')->autoClose(3000);
-        //alert()->success('Película editada con exito');
         return redirect('/dashboard/clientes');
     }
 

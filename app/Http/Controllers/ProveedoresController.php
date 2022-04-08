@@ -13,7 +13,7 @@ class ProveedoresController extends Controller
     
     public function getIndex()
     {
-        return view('proveedores');
+        return view('proveedores.proveedores');
     }
     
 }
