@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Articulo;
-use App\Models\Proveedor;
+use App\Models\Proveedores;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -17,7 +17,7 @@ class InventarioController extends Controller
     public function getIndex()
     {
         $articulos = Articulo::all();
-        $proveedores = Proveedor::all();
+        $proveedores = Proveedores::all();
         return view('inventarios.inventario',['articulos' => $articulos, 'proveedores'=>$proveedores]);
     }
 

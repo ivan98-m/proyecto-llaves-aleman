@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Articulo;
 use App\Models\Detalle_factura_compra;
 use App\Models\Factura_compra;
-use App\Models\Proveedor;
+use App\Models\Proveedores;
 use Illuminate\Http\Request;
 
 class ComprasController extends Controller
@@ -13,7 +13,7 @@ class ComprasController extends Controller
     public function getIndex()
     {
         $compras = Factura_compra::all();
-        $proveedores = Proveedor::all();
+        $proveedores = Proveedores::all();
         return view('facturacion.compras.factura_compras',
         ['compras'=>$compras, 
         'proveedores'=>$proveedores
@@ -24,7 +24,7 @@ class ComprasController extends Controller
     {
         $compra = Factura_compra::findOrFail($id);
         $productos = Articulo::all();
-        $proveedores = Proveedor::all();
+        $proveedores = Proveedores::all();
         $compra_detalles = Detalle_factura_compra::all();
 		return view('facturacion.compras.factura_compra_detalle', 
         ['id'=>$id,

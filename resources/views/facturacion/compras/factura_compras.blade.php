@@ -27,7 +27,7 @@
             </div>
             <div class="col-4">
                 <label for="recipient-name" class="col-form-label">Total</label>
-                <input type="number" value="0" class="form-control" id="total" name="total" placeholder="0" readonly>
+                <input type="number" value="0" class="form-control" id="total" name="total" placeholder="0" >
             </div>
         </div>
         <div class="d-flex flex-row-reverse mt-2">
