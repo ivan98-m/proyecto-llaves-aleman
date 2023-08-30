@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\InventarioController;
@@ -115,8 +116,10 @@ Route::prefix('dashboard')->middleware('auth')->group(function (){
     Route::get('/trabajos', '\App\Http\Controllers\TrabajosController@getIndex');
 
     //-----------------proveedores----------------
-    Route::get('/proveedores', '\App\Http\Controllers\ProveedoresController@getIndex');
-
+    Route::get('proveedores', [ProveedoresController::class, 'getIndex']);
+    Route::post('proveedores/create', [ProveedoresController::class, 'createProveedores'])->name('proveedores.create');
+    Route::put('proveedores/{id_proveedor}', [ProveedoresController::class, 'editProveedores'])->name('proveedores.update');
+    Route::delete('proveedores/delete/{id_proveedor}', [ProveedoresController::class, 'deleteProveedores'])->name('proveedores.delete');
 });
 
 Auth::routes();
