@@ -274,6 +274,7 @@ return [
             'icon' => 'fas fa-user-cog',
             'icon_color' => 'yellow'
         ],
+        
         [
             'text' => 'Facturacion',
             'url'  => 'dashboard/facturacion',
@@ -295,12 +296,6 @@ return [
             ]
         ],
         [
-            'text' => 'Domicilios',
-            'url'  => 'dashboard/domicilios',
-            'icon' => 'fas fa-motorcycle',
-            'icon_color' => 'yellow'
-        ],
-        [
             'text' => 'Trabajos',
             'url'  => 'dashboard/trabajos',
             'icon' => 'fas fa-fw fa-lock',
@@ -312,60 +307,6 @@ return [
             'icon' => 'fas fa-key',
             'icon_color' => 'yellow'
         ],
-       /* [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],*/
     ],
    
     /*

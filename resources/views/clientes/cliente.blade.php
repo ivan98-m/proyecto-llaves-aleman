@@ -62,17 +62,6 @@
                     @include('clientes.modal_edit')
                 @endforeach
             </tbody>
-            <tfoot>
-                <tr>
-                    <th>IDENTIFICACIÓN</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                    <th>DIRECCIÓN</th>
-                    <th>CELULAR</th>
-                    <th>CORREO</th>
-                    <th>ACCION</th>
-                </tr>
-            </tfoot>
         </table>
     </div>
 

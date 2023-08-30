@@ -27,11 +27,10 @@ class InventarioController extends Controller
         'cod_articulo' => $request->cod_articulo,
         'id_proveedor' => $request->id_proveedor,
         'art_nombre' => $request->art_nombre,
-        'art_foto' => $request->art_foto,
         'art_descripcion' => $request->art_descripcion,
-        'stock' => $request->stock,
         'p_venta' => $request->p_venta,
-        'p_proveedor' => $request->p_proveedor
+        'p_proveedor' => $request->p_proveedor,
+        'stock' => $request->stock
     ]);
 
     toast('Producto creado con exito','success')->autoClose(3000);
@@ -46,7 +45,7 @@ class InventarioController extends Controller
         $articulo->cod_articulo = $request->cod_articulo;
         $articulo->id_proveedor = $request->id_proveedor;
         $articulo->art_nombre = $request->art_nombre;
-        $articulo->art_foto = $request->art_foto;
+        
         $articulo->art_descripcion = $request->art_descripcion;
         $articulo->stock = $request->stock;
         //$articulo->stock = $articulo->stock+$request->stock;

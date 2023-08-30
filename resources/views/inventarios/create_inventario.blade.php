@@ -13,15 +13,15 @@
     <div class="form-group row">
         <label for="labelcod" class="col-sm-1 col-form-label"> COD </label>
         <div class="col-sm-1">
-             <input type="text" class="col-md-15 form-control" id="inputcod" placeholder="Codigo">
+            <input type="text" class="col-md-15 form-control" id="inputcod" placeholder="Codigo">
         </div>
         <label for="labelproveedor" class="col-form-label">  Proveedor  </label>
         <div class="col-sm">
             <input type="text" class="form-control" id="inputproveedor" placeholder="Proveedor">
         </div>
-        <label for="labelcan" class="col-form-label">  Cantidad  </label>
+        <label for="labelcan" class="col-form-label">  Cantidad producto  </label>
         <div class="col-sm">
-            <input type="number" class="col-sm-6 form-control" id="inputcan" placeholder="cantidad">
+            <input type="number" class="col-sm-6 form-control" id="inputcan">
         </div>
     </div>
     <div class="form-group row">

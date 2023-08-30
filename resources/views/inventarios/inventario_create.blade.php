@@ -42,7 +42,7 @@
                     <div class="row g-2 m-0">
                         <div class="col-4">
                             <label for="recipient-name" class="col-form-label" >Cantidad:</label>
-                            <input type="number" value="0" class="form-control" id="stock" name="stock" placeholder="0" readonly>
+                            <input type="number" value="0" class="form-control" id="stock" name="stock">
                         </div>
                         <div class="col-4">
                             <label for="recipient-name" class="col-form-label">Valor Venta:</label>

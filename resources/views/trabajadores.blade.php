@@ -1,4 +1,6 @@
-@extends('adminlte::page')
+{{-- vista dashborad --}}
+{{-- @extends('adminlte::page') --}}
+@extends('master')
 
 @section('title', 'TRABAJADORES')
 
@@ -9,46 +11,41 @@
 @stop
 
 @section('content')
+<div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
+    <button class="btn btn btn-success" data-toggle="modal" data-target="#inventario_create">
+        <i class="fa fa-plus-circle"></i>Agregar
+    </button>
+    {{-- <a class="btn btn-success" href="#" data-toggle="modal" data-target="#inventario_create">
+            <i class="fa fa-plus-circle"style="font-size:20px;"></i>Agregar
+    </a> --}}
+    @include('inventarios.trabajadores_create')
+</div>
+
 <table id="trabajadores" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
+                <th>IDENTIFICACIÓN</th>
                 <th>NOMBRE</th>
                 <th>APELLIDO</th>
-                <th>IDENTIFICACIÓN</th>
+                <th>ESPECIALIDAD</th>
                 <th>DIRECCIÓN</th>
                 <th>CELULAR</th>
                 <th>CORREO</th>
             </tr>
         </thead>
         <tbody>
+        @foreach ($trabajadores as $trabajador)
             <tr>
-                <td>Sonya </td>
-                <td>Frost</td>
-                <td>108557455</td>
-                <td>calle falsa 123</td>
-                <td>325225225</td>
-                <td>sony@gmail.com</td>
+                <td>{{ $trabajador->id_trabajador}}</td>
+                <td>{{ $trabajador->nombres }}</td>
+                <td>{{ $trabajador->apellidos }}</td>
+                <td>{{ $trabajador->especialidad }}</td>
+                <td>{{ $trabajador->direccion }}</td>
+                <td>{{ $trabajador->celular }}</td>
+                <td>{{ $trabajador->correo }}</td>
             </tr>
-            <tr>
-                <td>Jena </td>
-                <td>Gaines</td>
-                <td>105855489</td>
-                <td>cll 25 cr 45-6</td>
-                <td>318525455</td>
-                <td>jena@hotmail.com</td>
-            </tr>
-            
+        @endforeach    
         </tbody>
-        <tfoot>
-            <tr>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-                <th>IDENTIFICACIÓN</th>
-                <th>DIRECCIÓN</th>
-                <th>CELULAR</th>
-                <th>CORREO</th>
-            </tr>
-        </tfoot>
     </table>
 @stop
 
@@ -57,9 +54,9 @@
 @stop
 
 @section('js')
-    <script> 
-    $(document).ready(function() {
-        $('#trabajadores').DataTable();
-    } );
- </script>
+    <script>
+        $(document).ready(function() {
+            $('#trabajadores').DataTable();
+        });
+    </script>
 @stop

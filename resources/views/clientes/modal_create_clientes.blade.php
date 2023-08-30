@@ -16,7 +16,6 @@
                             <select class="form-control" id="opc_documento" name="opc_documento" required>
                                 <option value="CC">Cédula de Ciudadanía</option>
                                 <option value="TI">Tarjeta de Identidad</option>
-                                <option value="RC">Registro Civil</option>
                                 <option value="CE">Cédula de Extranjería</option>
                             </select>
                         </div>

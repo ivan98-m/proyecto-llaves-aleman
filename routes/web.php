@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\TrabajadoresController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -110,6 +111,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function (){
 
     //-----------------trabajadores----------------
     Route::get('/trabajadores', '\App\Http\Controllers\TrabajadoresController@getIndex');
+    Route::post('trabajadores/create', [TrabajadoresController::class, 'createTrabajador'])->name('trabajador.create');
 
     //-----------------trabajos----------------
     Route::get('/trabajos', '\App\Http\Controllers\TrabajosController@getIndex');

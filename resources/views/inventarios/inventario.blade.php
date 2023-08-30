@@ -70,16 +70,6 @@
                     @include('inventarios.inventario_edit')
                 @endforeach
         </tbody>
-        <tfoot>
-            <tr>
-                <th>CODIGO</th>
-                <th>NOMBRE PRODUCTO</th>
-                <th>DESCRIPCION</th>
-                <th>PRECIO</th>
-                <th>CANTIDAD</th>
-                <th>ACCION</th>
-            </tr>
-        </tfoot>
     </table>
 </div>
 @include('notificaciones')
