@@ -31,6 +31,7 @@
                 <th>DIRECCIÓN</th>
                 <th>CELULAR</th>
                 <th>CORREO</th>
+                <th>ACCIÓN</th>
             </tr>
         </thead>
         <tbody>
@@ -43,7 +44,18 @@
                 <td>{{ $trabajador->direccion }}</td>
                 <td>{{ $trabajador->celular }}</td>
                 <td>{{ $trabajador->correo }}</td>
+                <td>
+                    <button class="btn btn-warning p-1" data-toggle="modal" data-target="#trabajadores_edit{{ $trabajador->id_trabajador }}">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <form method="POST" action="{{ route('product.delete', $trabajador->id_trabajador) }}" style="display:inline">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit"  class="btn btn-danger show_confirm p-1"><i class="fa fa-trash"></i></button>
+                    </form>
+                </td>
             </tr>
+            @include('trabajadores_edit')
         @endforeach    
         </tbody>
     </table>

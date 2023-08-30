@@ -32,4 +32,23 @@ class TrabajadoresController extends Controller
         $trabajador->save();
         return redirect('/dashboard/trabajadores');
     }
+
+    public function editTrabajador(Request $request, $id)
+    {
+        $trabajador = Trabajador::findOrFail($id);
+
+        $trabajador->id_trabajador = $request->id_trabajador;
+        $trabajador->nombres = $request->nombres;
+        $trabajador->apellidos = $request->apellidos;
+        
+        $trabajador->especialidad = $request->especialidad;
+        $trabajador->direccion = $request->direccion;
+        //$trabajador->stock = $trabajador->stock+$request->stock;
+        $trabajador->celular = $request->celular;
+        $trabajador->correo = $request->correo;
+
+        $trabajador->save();
+        toast('trabajador $trabajador actualizado con exito','success')->autoClose(3000);
+        return redirect('/dashboard/trabajadores');
+    }
 }

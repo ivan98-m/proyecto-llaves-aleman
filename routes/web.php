@@ -112,7 +112,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function (){
     //-----------------trabajadores----------------
     Route::get('/trabajadores', '\App\Http\Controllers\TrabajadoresController@getIndex');
     Route::post('trabajadores/create', [TrabajadoresController::class, 'createTrabajador'])->name('trabajador.create');
-
+    Route::put('trabajadores/create/{id}', [TrabajadoresController::class, 'editTrabajador'])->name('trabajador.edit');
     //-----------------trabajos----------------
     Route::get('/trabajos', '\App\Http\Controllers\TrabajosController@getIndex');
 
