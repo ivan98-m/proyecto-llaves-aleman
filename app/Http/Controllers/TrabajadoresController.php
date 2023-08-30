@@ -51,4 +51,10 @@ class TrabajadoresController extends Controller
         toast('trabajador $trabajador actualizado con exito','success')->autoClose(3000);
         return redirect('/dashboard/trabajadores');
     }
+    public function deleteTrabajador($id)
+    {
+    Trabajador::findOrFail($id)->delete();
+    toast('Trabajador eliminado','warning')->autoClose(3000);
+    return redirect('/dashboard/trabajadores');
+    }
 }

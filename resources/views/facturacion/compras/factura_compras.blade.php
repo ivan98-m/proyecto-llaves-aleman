@@ -9,33 +9,14 @@
 @stop
 
 @section('content')
-<div class="border border-dark p-2 m-1 rounded">
-    <form action="{{ route('compra.create') }}">
-        @csrf
-        <div class="row">  
-            <div class="col-4">
-                <label for="recipient-name" class="col-form-label">Proveedor</label>
-                <select class="form-control" id="id_proveedor" name="id_proveedor" required>
-                    @foreach ($proveedores as $proveedor)
-                        <option value="{{$proveedor->id_proveedor}}">{{$proveedor->nom_proveedor}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="col-4">
-                <label for="recipient-name" class="col-form-label">Fecha</label>
-                <input type="text" class="form-control" id="fecha" name="fecha" placeholder="{{$fechaActual =  date("Y-m-d h:i:s")}}">
-            </div>
-            <div class="col-4">
-                <label for="recipient-name" class="col-form-label">Total</label>
-                <input type="number" value="0" class="form-control" id="total" name="total" placeholder="0" readonly>
-            </div>
-        </div>
-        <div class="d-flex flex-row-reverse mt-2">
-            <button class="btn btn btn-success">
-                <i class="fa fa-plus-circle"></i>Agregar
-            </button>
-        </div>
-    </form>
+<div class="d-flex flex-row-reverse border border-dark p-2 m-1 rounded">
+    <button class="btn btn btn-success" data-toggle="modal" data-target="#compras_create">
+        <i class="fa fa-plus-circle"></i>Agregar
+    </button>
+    {{-- <a class="btn btn-success" href="#" data-toggle="modal" data-target="#compras_create">
+            <i class="fa fa-plus-circle"style="font-size:20px;"></i>Agregar
+    </a> --}}
+    @include('facturacion.compras.compras_create')
 </div>
 <div class="border border-dark p-2 m-1 rounded">
     <table id="no" class="table table-striped table-bordered" style="width:100%">
@@ -76,15 +57,6 @@
                 </tr>
             @endforeach
         </tbody>
-        <tfoot>
-            <tr>
-                <th>CODIGO FACTURA</th>
-                <th>PROVEEDOR</th>
-                <th>FECHA</th>
-                <th>TOTAL</th>
-                <th>ACCION</th>
-            </tr>
-        </tfoot>
     </table>
 </div>
 

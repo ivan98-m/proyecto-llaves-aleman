@@ -9,4 +9,11 @@ class Detalle_factura_compra extends Model
 {
     use HasFactory;
     protected $table = 'detalle_factura_compras';
+    protected $fillable =[
+        'cod_factura',
+        'id_proveedor',
+        'cod_articulo',
+        'cantidad',
+        'subtotal'
+    ];
 }

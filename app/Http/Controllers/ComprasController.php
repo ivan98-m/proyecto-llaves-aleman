@@ -38,9 +38,10 @@ class ComprasController extends Controller
     public function createCompra(Request $request)
     {
         $fac_compra = new Factura_compra([
-            'cod_factura' => $request->cod_articulo,
+            'cod_factura' => $request->cod_factura,
             'id_proveedor' => $request->id_proveedor,
-            'total' => $request->total,
+            'fecha'=> $request->fecha,
+            'total' => $request->total
         ]);
 
         $fac_compra->save();
@@ -52,6 +53,18 @@ class ComprasController extends Controller
     {
         Factura_compra::findOrFail($id)->delete();
         toast('Factura compra eliminada','warning')->autoClose(3000);
+        return redirect('/dashboard/facturacion/compras');
+    }
+
+    public function createFacturadet(Request $request){
+        $fac_deta = new Detalle_factura_compra([
+            'cod_factura' => $request->cod_factura,
+            'id_proveedor' => $request->id_proveedor,
+            'cod_articulo'=> $request->cod_articulo,
+            'cantidad' => $request->cantidad,
+            'subtotal' => $request->subtotal * $request->cantidad
+        ]);
+        $fac_deta->save();
         return redirect('/dashboard/facturacion/compras');
     }
 }

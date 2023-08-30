@@ -5,6 +5,7 @@ use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\TrabajadoresController;
+use App\Http\Controllers\TrabajosController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -101,11 +102,13 @@ Route::prefix('dashboard')->middleware('auth')->group(function (){
     });
 
     Route::get('facturacion/compras', [ComprasController::class, 'getIndex']);
-    Route::get('facturacion/compras/create', [ComprasController::class, 'createCompra'])->name('compra.create');
+    Route::post('facturacion/compras/create', [ComprasController::class, 'createCompra'])->name('compra.create');
 
     Route::delete('facturacion/compras/delete/{id}', [ComprasController::class, 'deleteCompra'])->name('compra.delete');
 
     Route::get('facturacion/compras/detalle/{id}', [ComprasController::class, 'getCompraDetalle']);
+    Route::post('facturacion/compras/factura_det', [ComprasController::class, 'createFacturadet'])->name('facturadeta.create');
+
     //-----------------ventas----------------
     Route::get('/ventas', '\App\Http\Controllers\VentasController@getIndex');
 
@@ -113,6 +116,8 @@ Route::prefix('dashboard')->middleware('auth')->group(function (){
     Route::get('/trabajadores', '\App\Http\Controllers\TrabajadoresController@getIndex');
     Route::post('trabajadores/create', [TrabajadoresController::class, 'createTrabajador'])->name('trabajador.create');
     Route::put('trabajadores/create/{id}', [TrabajadoresController::class, 'editTrabajador'])->name('trabajador.edit');
+    Route::delete('trabajadores/delete/{id}', [TrabajadoresController::class, 'deleteTrabajador'])->name('trabajador.delete');
+
     //-----------------trabajos----------------
     Route::get('/trabajos', '\App\Http\Controllers\TrabajosController@getIndex');
 

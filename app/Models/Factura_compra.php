@@ -13,6 +13,7 @@ class Factura_compra extends Model
     protected $fillable =[
         'cod_factura',
         'id_proveedor',
+        'fecha',
         'total'
     ];
     

@@ -295,18 +295,6 @@ return [
                 ],
             ]
         ],
-        [
-            'text' => 'Trabajos',
-            'url'  => 'dashboard/trabajos',
-            'icon' => 'fas fa-fw fa-lock',
-            'icon_color' => 'yellow'
-        ],
-        [
-            'text' => 'Proveedores',
-            'url'  => 'dashboard/proveedores',
-            'icon' => 'fas fa-key',
-            'icon_color' => 'yellow'
-        ],
     ],
    
     /*

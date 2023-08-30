@@ -48,7 +48,7 @@
                     <button class="btn btn-warning p-1" data-toggle="modal" data-target="#trabajadores_edit{{ $trabajador->id_trabajador }}">
                         <i class="fa fa-edit"></i>
                     </button>
-                    <form method="POST" action="{{ route('product.delete', $trabajador->id_trabajador) }}" style="display:inline">
+                    <form method="POST" action="{{ route('trabajador.delete', $trabajador->id_trabajador) }}" style="display:inline">
                         @method('DELETE')
                         @csrf
                         <button type="submit"  class="btn btn-danger show_confirm p-1"><i class="fa fa-trash"></i></button>

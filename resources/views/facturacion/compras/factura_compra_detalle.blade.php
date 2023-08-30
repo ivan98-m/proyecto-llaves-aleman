@@ -11,7 +11,7 @@
 @section('content')
     <div class="border border-dark p-2 rounded">
         <h3>Factura compra Nº{{ $compra->cod_factura }}</h3>
-        <form>
+        <form action="{{ route('facturadeta.create') }}" method="POST">
             <div class="row">
                 <div class="col-4">
                     <label for="recipient-name" class="col-form-label">Proveedor</label>
@@ -24,8 +24,8 @@
                     @endforeach
                 </div>
                 <div class="col-4">
-                    <label for="recipient-name" class="col-form-label">Prducto</label>
-                    <select class="form-control" id="id_proveedor" name="id_proveedor" required>
+                    <label for="recipient-name" class="col-form-label">Producto</label>
+                    <select class="form-control" id="cod_articulo" name="cod_articulo" required>
                         @foreach ($productos as $producto)
                             <option value="{{ $producto->cod_articulo }}">{{ $producto->art_nombre }}</option>
                         @endforeach
@@ -39,11 +39,7 @@
             <div class="row">
                 <div class="col-4">
                     <label for="recipient-name" class="col-form-label">Valor Venta:</label>
-                    <input type="number" class="form-control" id="p_venta" name="p_venta">
-                </div>
-                <div class="col-4">
-                    <label for="recipient-name" class="col-form-label">Valor Proveedor:</label>
-                    <input type="number" class="form-control" id="p_proveedor" name="p_proveedor">
+                    <input type="number" class="form-control" id="sub_total" name="sub_total">
                 </div>
                 <div class="col-4">
                     <div class="d-flex flex-row-reverse mt-4">
@@ -54,18 +50,19 @@
                     </div>
                 </div>
             </div>
+            @csrf
         </form>
     </div>
     <div class="border border-dark p-2 mt-2 rounded">
         <table class="table table-striped">
             <thead>
-              <tr>
-                <th>CODIGO ARTICULO</th>
-                <th>VALOR/u</th>
-                <th>CANTIDAD</th>
-                <th>SUBTOTAL</th>
-                <th>ACCION</th>
-              </tr>
+                <tr>
+                    <th>CODIGO ARTICULO</th>
+                    <th>VALOR/u</th>
+                    <th>CANTIDAD</th>
+                    <th>SUBTOTAL</th>
+                    <th>ACCION</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach ($compra_detalles as $compra_detalle)
@@ -85,6 +82,6 @@
                     </tr>
                 @endforeach 
             </tbody>
-          </table>
+        </table>
     </div>
 @stop
