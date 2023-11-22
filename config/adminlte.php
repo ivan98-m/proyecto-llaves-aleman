@@ -106,7 +106,7 @@ return [
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
+    'classes_auth_icon' => 'img\taller.jpeg',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
     /*
@@ -281,12 +281,12 @@ return [
             'icon' => 'fas fa-calculator',
             'icon_color' => 'yellow',
             'submenu' => [
-                [
+                /*[
                     'text' => 'Ventas',
-                    'url'  => '#',
+                    'url'  => 'dashboard/ventas',
                     'icon' => 'fas fa-donate',
                     'icon_color' => 'green'
-                ],
+                ],*/
                 [
                     'text' => 'Compras',
                     'url'  => 'dashboard/facturacion/compras',
